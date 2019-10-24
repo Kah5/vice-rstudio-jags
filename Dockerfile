@@ -1,4 +1,4 @@
-FROM cyversevice/rstudio-verse:3.6.0
+FROM ltrr/vice-rstudio-tidyverse:3.6.0
 
 RUN set -e \
   && apt-get update \
