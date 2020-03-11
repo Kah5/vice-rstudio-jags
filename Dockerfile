@@ -7,4 +7,7 @@ RUN set -e \
   && rm -rf /var/lib/apt/lists/* \
   && install2.r --error \
     coda \
-    rjags
+    rjags \
+    nimble \
+    pryr \
+    gridExtra
