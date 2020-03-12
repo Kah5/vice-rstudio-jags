@@ -1,4 +1,4 @@
-FROM ltrr/vice-rstudio-tidyverse:3.6.0
+FROM cyversevice/rstudio-verse:3.6.2
 
 RUN set -e \
   && apt-get update \
@@ -7,4 +7,10 @@ RUN set -e \
   && rm -rf /var/lib/apt/lists/* \
   && install2.r --error \
     coda \
-    rjags
+    rjags \
+    nimble \
+    pryr \
+    gridExtra
+
+RUN cd /home/rstudio/ && git clone https://github.com/Kah5/pecan.git
+RUN cd /home/rstudio/pecan && git checkout working
